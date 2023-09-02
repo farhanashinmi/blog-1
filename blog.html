@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body >
+
+    <section class="p-32 w-full">
+    <h1 class="font-extrabold lg:text-4xl md:text-4xl sm:text-2xl: text-green-800 lg:text-left md:text-center sm:text-center"> <u>The Scope of var, let, and const</u></h1><br><br><br>
+
+    <p>
+        <span class="text-3xl font-bold text-red-500">Var</span><br>
+        
+        Before the advent of ES6, var declarations ruled. There are issues associated with variables declared with var, though. That is why it was necessary for new ways to declare variables to emerge. First, let's get to understand var more before we discuss those issues.<br><br>
+        
+        <span class="text-3xl font-bold text-red-500">Scope of var</span><br>
+        Scope essentially means where these variables are available for use. var declarations are globally scoped or function/locally scoped.
+        
+        The scope is global when a var variable is declared outside a function. This means that any variable that is declared with var outside a function block is available for use in the whole window.
+        
+        var is function scoped when it is declared within a function. This means that it is available and can be accessed only within that function.</p>
+    
+
+
+
+    <p>
+        <span class="text-3xl font-bold text-orange-500">Let</span><br>
+let is now preferred for variable declaration. It's no surprise as it comes as an improvement to var declarations. It also solves the problem with var that we just covered. Let's consider why this is so.<br><br>
+
+<span class="text-3xl font-bold text-orange-500">Scope of let</span><br>
+let is block scoped
+A block is a chunk of code bounded by {}. A block lives in curly braces. Anything within curly braces is a block.
+
+So a variable declared in a block with let  is only available for use within that block. Let me explain this with an example:
+
+   <span class="text-red-800 font-semibold"><br>let greeting = "say Hi";<Br>
+   let times = 4;<br>
+
+   if (times > 3) {<br>
+        let hello = "say Hello instead";<br>
+        console.log(hello);// "say Hello instead"<br>
+    }
+   console.log(hello) // hello is not defined<br></span>
+We see that using hello outside its block (the curly braces where it was defined) returns an error. This is because let variables are block scoped .
+    </p><br><br>
+    
+    <span class="text-3xl font-bold text-red-500">Const</span><br>
+Variables declared with the const maintain constant values. const declarations share some similarities with let declarations.<br><br>
+
+<span class="text-3xl font-bold text-red-500">Scope of const</span><br>
+const declarations are block scoped
+Like let declarations, const declarations can only be accessed within the block they were declared.
+
+</section>
+
+
+<section class="p-32 w-full mt-4" >
+    <h1 class="pb-6 text-4xl font-bold">Null and Undefined</h1>
+    <div class="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 justify-center text-center gap-24">
+    <div class="w-96 bg-yellow-200 h-52 p-6">
+        <h1 class=" text-2xl font-bold  text-white">Null</h1>
+<p>Null in JavaScript means an empty value and is also a primitive type in JavaScript. The variable which has been assigned as null contains no value. Undefined, on the other hand, means the variable has been declared, but its value has not been assigned.</p>
+    </div>
+    <div class="w-96 bg-red-300 h-52 p-6" >
+        <h1 class=" text-2xl font-bold text-white">Undefined</h1>
+        <p>Undefined means the variable has been declared, but its value has not been assigned.</p>
+    </div></div>
+</section>
+
+
+
+<section class="p-32 w-full mt-4" >
+    <h1 class=" text-2xl font-bold text-black pb-10">Rest API</h1>
+    <p>A web service is a collection of open protocols and standards used for exchanging data between applications or systems. Software applications written in various programming languages and running on various platforms can use web services to exchange data over computer networks like the Internet in a manner similar to inter-process communication on a single computer. 
+
+        Web services based on REST Architecture are known as RESTful web services. These webservices uses HTTP methods to implement the concept of REST architecture. A RESTful web service usually defines a URI, Uniform Resource Identifier a service, which provides resource representation such as JSON and set of HTTP Methods</p>
+</section>
+
+
+
+        <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
